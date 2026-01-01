@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="431.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo4.DressListController">
+   <children>
+      <Label layoutX="186.0" layoutY="7.0" text="Dress Collection" textFill="#9f92c3">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <TreeTableView layoutX="15.0" layoutY="87.0" prefHeight="200.0" prefWidth="530.0">
+         <columns>
+            <TreeTableColumn prefWidth="75.0" text="name" />
+            <TreeTableColumn fx:id="DressListTable" prefWidth="75.0" text="type" />
+            <TreeTableColumn prefWidth="75.0" text="color" />
+            <TreeTableColumn prefWidth="75.0" text="price" />
+            <TreeTableColumn prefWidth="95.0" text="Last Purchase" />
+            <TreeTableColumn prefWidth="55.0" text="Quantity" />
+            <TreeTableColumn prefWidth="75.0" text="Boosted" />
+         </columns>
+      </TreeTableView>
+      <Button layoutX="504.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#changeToDressCollection" text="Back" />
+      <TextField fx:id="search" layoutX="15.0" layoutY="56.0" prefHeight="25.0" prefWidth="530.0" />
+      <Label layoutX="27.0" layoutY="297.0" text="Selected dress information">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

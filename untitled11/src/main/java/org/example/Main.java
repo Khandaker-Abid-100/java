@@ -1,0 +1,18 @@
+package org.example;
+import java.util.concurrent.*;
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        int Ws = 4;
+        BlockingQueue<p> nq = new LinkedBlockingQueue<>();
+
+        BlockingQueue<Integer> ac = new LinkedBlockingQueue<>();
+
+        Send sender = new Send(Ws, ac);
+        Receive receiver = new Receive(Ws,nq,  ac);
+
+        for (int i = 0; i < 10; i++) {
+            sender.sendP(i, "d" + i);
+            Thread.sleep(2000);
+        }
+    }
+}
